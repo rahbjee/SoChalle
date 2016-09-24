@@ -6,7 +6,7 @@
 <%= render 'comments/form' %></p>
 <br>
 
-<%= link_to "Back to Post List", root_path %>
+<%= link_to "Back to Post List", posts_path %>
 
 <% if user_signed_in? %>
 	<% if @post.user_id == current_user.id %>

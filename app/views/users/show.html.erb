@@ -1,0 +1,23 @@
+<h1><%= @user.email %></h1>
+<% if user_signed_in? %>
+	<% if @user.id == current_user.id %>
+		<%= link_to "Edit Registration Info", edit_user_registration_path %>
+	<% end %>
+<% end %>
+
+
+
+
+
+<% if @user.email == @post.user.email %>
+
+	<h2>Posts</h2><b><%= @post.content %></b>
+	<p>Posted by: <%= @post.user.email %> <%= time_ago_in_words(@post.created_at) %> ago </p>
+	<h3> Comments: </h3>
+	<%= render @post.comments %>
+	<p>Reply to Post
+	<%= render 'comments/form' %></p>
+	<br>
+
+<% end %>
+
