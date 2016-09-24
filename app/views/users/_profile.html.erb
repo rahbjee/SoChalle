@@ -1,0 +1,2 @@
+<h2><%= @post.content %></h2>
+<p>Posted by: <%= @post.user.email %> <%= time_ago_in_words(@post.created_at) %> ago </p>

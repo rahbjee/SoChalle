@@ -11,8 +11,7 @@
 
 <% if @user.email == @post.user.email %>
 
-	<h2>Posts</h2><b><%= @post.content %></b>
-	<p>Posted by: <%= @post.user.email %> <%= time_ago_in_words(@post.created_at) %> ago </p>
+	<%= render 'profile' %>
 	<h3> Comments: </h3>
 	<%= render @post.comments %>
 	<p>Reply to Post
